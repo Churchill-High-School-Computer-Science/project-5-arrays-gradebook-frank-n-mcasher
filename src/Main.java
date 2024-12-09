@@ -1,23 +1,40 @@
 public class Main {
-   public static void main(String[] args) {
-    String[][] data1 = {
-        { "Borjigin", "Temüjin", "85", "90", "80", "88", "75", "80", "70", "85", "90", "95", "85", "78", "88", "92" }
-    };
+    public static void main(String[] args) {
 
-    Gradebook testBook1 = new Gradebook(data1);
+        String[][] data1 = {
+                { "Borjigin", "Temüjin", "85.0", "90.0", "80.0", "88.0", "75.0", "80.0", "70.0", "85.0", "90.0", "95.0",
+                        "85.0", "78.0", "88.0", "92.0" },
+                { "Jadran", "Jamukha", "78.0", "82.0", "85.0", "80.0", "88.0", "90.0", "92.0", "95.0", "85.0", "87.0",
+                        "90.0", "93.0", "88.0", "85.0" },
+                { "Khereid", "Toghrul", "92.0", "88.0", "91.0", "89.0", "84.0", "86.0", "85.0", "82.0", "88.0", "90.0",
+                        "91.0", "89.0", "90.0", "93.0" }
+        };
 
-    // Test changeGrade
-    System.out.println(testBook1.changeGrade("Borjigin", "Homework 5", 95)); // true
-    System.out.println(testBook1.changeGrade("Borjigin", "Homework 15", 95)); // false
+        String[][] data2 = {
+                { "Rostov", "Nikolai", "88.0", "92.0", "78.0", "85.0", "80.0", "83.0", "85.0", "90.0", "88.0", "87.0",
+                        "85.0", "89.0", "90.0", "86.0" },
+                { "Bolkov", "Andrei", "95.0", "87.0", "89.0", "91.0", "93.0", "90.0", "88.0", "85.0", "92.0", "94.0",
+                        "89.0", "92.0", "90.0", "93.0" },
+                { "Kuragin", "Anatole", "76.0", "80.0", "72.0", "70.0", "78.0", "75.0", "77.0", "74.0", "79.0", "73.0",
+                        "81.0", "76.0", "78.0", "72.0" },
+                { "Bezukhov", "Pierre", "90.0", "85.0", "82.0", "84.0", "88.0", "87.0", "85.0", "83.0", "86.0", "89.0",
+                        "90.0", "91.0", "89.0", "88.0" },
+                { "Rostova", "Natasha", "92.0", "89.0", "85.0", "88.0", "90.0", "89.0", "91.0", "88.0", "92.0", "90.0",
+                        "88.0", "87.0", "90.0", "91.0" },
+                { "Drubetskoy", "Boris", "84.0", "80.0", "78.0", "81.0", "82.0", "79.0", "84.0", "83.0", "85.0", "82.0",
+                        "80.0", "86.0", "83.0", "84.0" },
+                { "Dolokhov", "Fyodor", "89.0", "85.0", "88.0", "84.0", "83.0", "87.0", "90.0", "85.0", "88.0", "86.0",
+                        "84.0", "89.0", "85.0", "86.0" },
+                { "Karagin", "Helene", "78.0", "82.0", "80.0", "79.0", "81.0", "80.0", "83.0", "85.0", "84.0", "82.0",
+                        "81.0", "79.0", "80.0", "84.0" },
+                { "Bolkonsky", "Andrei", "93.0", "89.0", "90.0", "91.0", "88.0", "87.0", "92.0", "89.0", "90.0", "92.0",
+                        "93.0", "91.0", "92.0", "89.0" },
+                { "Bolkonskaya", "Maria", "85.0", "88.0", "86.0", "84.0", "83.0", "82.0", "87.0", "85.0", "86.0",
+                        "88.0", "85.0", "89.0", "88.0", "86.0" }
+        };
 
-    // Test findAssignmentAverage
-    System.out.println(testBook1.findAssignmentAverage("Homework 5")); // 95.0
+        Gradebook testBook1 = new Gradebook(data1);
+        Gradebook testBook2 = new Gradebook(data2);
 
-    // Test findStudentAverage
-    System.out.println(testBook1.findStudentAverage("Borjigin")); // Weighted average
-
-    // Test printStudentInfo
-    testBook1.printStudentInfo("Borjigin"); // Prints scores
-    testBook1.printStudentInfo("Unknown"); // Student not found
-}
+    }
 }
